@@ -175,6 +175,7 @@ int OnCalculate(const int rates_total,
     }
     //现在LowMapBuffer保存了满足寻波条件的所有低点，寻波条件是：
     //{[(波深大于 InpDeviation * _Point) || (半波长大于 InpBackstep)] && (该下降波是由InpDepth的寻波窗口找出来的)} || 窗口范围内只有一个波
+    //概括点说就是，如果窗口内只找到一个波，那直接跳过，只有找到多于一个波时，才进行进一步波筛选步骤。
     //HighMapBuffer 逻辑类似    
     //在上面的代码中，把最近的一个波的节点信息清除了，其实只清除最后两个节点信息，但是新波的左节点也是要重新确定的。
     //并且 extreme_search 已经保存了接下来我们要找的是上升波还是下降波
