@@ -24,14 +24,14 @@ struct WAVE{
 #property indicator_width1 1
 //--- input parameters
 input int InpDepth = 12;    // Find wave window length
-input int InpDeviation = 5; // Deviation
-input int InpBackstep = 3;  // Back Step
+input int InpDeviation = 5; // min wave high
+input int InpBackstep = 3;  // min half-wave length
 //--- indicator buffers
 double ZigZagBuffer[];  // main buffer
-double HighMapBuffer[]; // ZigZag high extremes (peaks)
-double LowMapBuffer[];  // ZigZag low extremes (bottoms)
+double HighMapBuffer[]; // ZigZag high candidate (peaks)
+double LowMapBuffer[];  // ZigZag low candidate (bottoms)
 
-int ExtRecalc = 3; // number of last extremes for recalculation
+int ExtRecalc = 3; // number of last wave key points for recalculation
 
 enum EnSearchMode
 {
