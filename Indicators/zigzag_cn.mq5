@@ -128,7 +128,7 @@ int OnCalculate(const int rates_total,
     {
         //--- 找下降波
         val = low[Lowest(low, InpDepth, shift)];  //按窗口大小找最低点.
-        if (val == last_low) //上次和这次都找到一样的地点，直接跳到找高点
+        if (val == last_low) //上次和这次都找到一样的地点，直接跳到找上升波
             val = 0.0;
         else  //下面的代码保证波谷满足两个条件之一： 
         {     //1. 波谷深度大于 InpDeviation * _Point  2. 半波长大于 InpBackstep
