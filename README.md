@@ -1,4 +1,4 @@
-## Notation to The MQL5 Source Code
+## Notation to the MQL5 Source Code
 
 This resposity will record some complicate source code's notation when I read the fucking source code.
 Including indicators and the source code in Include subdirectory in MQL5 directory.
